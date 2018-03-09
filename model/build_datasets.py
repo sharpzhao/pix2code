@@ -19,7 +19,7 @@ if len(argv) < 1:
 else:
     input_path = argv[0]
 
-distribution = 6 if len(argv) < 2 else argv[1]
+distribution = 4 if len(argv) < 2 else argv[1]
 
 TRAINING_SET_NAME = "training_set"
 EVALUATION_SET_NAME = "eval_set"
@@ -34,6 +34,7 @@ for f in os.listdir(input_path):
             path_img = "{}/{}.png".format(input_path, file_name)
             paths.append(file_name)
 
+paths = paths[0: 100]
 evaluation_samples_number = len(paths) / (distribution + 1)
 training_samples_number = evaluation_samples_number * distribution
 
