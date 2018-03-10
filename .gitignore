@@ -157,5 +157,3 @@ fabric.properties
 datasets/*
 !datasets/pix2code_datasets.z*
 
-# Training output
-bin/
